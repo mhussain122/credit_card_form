@@ -17,7 +17,7 @@ class CreditCardLightTheme implements CreditCardTheme {
   @override
   Color textColor = HexColor('242424');
   @override
-  Color borderColor = HexColor('e8e8f6');
+  Color borderColor = HexColor('FFAEACB3');
   @override
   Color labelColor = Colors.black45;
 }

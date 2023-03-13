@@ -65,25 +65,6 @@ class CardUtils {
         img = 'brand_visa.png';
         imgWidth = 40.0;
         break;
-      case CardType.americanExpress:
-        img = 'brand_amex.png';
-        imgWidth = 40.0;
-        break;
-      case CardType.discover:
-        img = 'brand_discover.png';
-        imgWidth = 60.0;
-        break;
-      case CardType.dinersClub:
-        img = 'brand_diners.png';
-        imgWidth = 40.0;
-        break;
-      case CardType.jcb:
-        img = 'brand_jcb.png';
-        imgWidth = 40.0;
-        break;
-      case CardType.others:
-        img = 'credit_card.png';
-        break;
       default:
         img = 'credit_card.png';
         break;
@@ -98,14 +79,6 @@ class CardUtils {
       cardType = CardType.master;
     } else if (input.startsWith(RegExp(r'[4]'))) {
       cardType = CardType.visa;
-    } else if (input.startsWith(RegExp(r'((34)|(37))'))) {
-      cardType = CardType.americanExpress;
-    } else if (input.startsWith(RegExp(r'((6[45])|(6011))'))) {
-      cardType = CardType.discover;
-    } else if (input.startsWith(RegExp(r'((30[0-5])|(3[89])|(36)|(3095))'))) {
-      cardType = CardType.dinersClub;
-    } else if (input.startsWith(RegExp(r'(352[89]|35[3-8][0-9])'))) {
-      cardType = CardType.jcb;
     } else if (input.length <= 8) {
       cardType = CardType.others;
     } else {

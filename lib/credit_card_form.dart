@@ -8,17 +8,7 @@ import 'package:flutter/services.dart';
 part 'component.dart';
 part 'theme.dart';
 
-enum CardType {
-  master,
-  visa,
-  verve,
-  discover,
-  americanExpress,
-  dinersClub,
-  jcb,
-  others,
-  invalid
-}
+enum CardType { master, visa, others, invalid }
 
 class CreditCardResult {
   final String cardNumber;
@@ -28,9 +18,11 @@ class CreditCardResult {
   final String expirationYear;
   final CardType? cardType;
   final bool isValid;
+  final String nickName;
   const CreditCardResult({
     required this.cardNumber,
     required this.cvc,
+    required this.nickName,
     required this.isValid,
     required this.cardHolderName,
     required this.expirationMonth,
